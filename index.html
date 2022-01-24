@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatApp</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!--we NO NEED to write path as public/style/style.css 
+        insted of this we can add simple path as path added above because we already served public folder
+        in server.js so we don't need to add that folder in path.-->
+</head> 
+
+<body>
+
+    <nav>
+        <img src='/png.GIF' alt=''>
+    </nav>
+    <div class='container'>
+        <div class="roll">
+        <div class="users-count">0</div>
+        <div class='users-list'></div>
+        </div>
+        <div class="chats">
+        <div class='send'>
+            <form action='#' id=send-container>
+                <input type='text'  name='messageInp' id='user-msg'>       
+                <button id='user-send' type='button' id="user-send"><img src="img/send.jpg" height="28"  class="send-img" alt=""></button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="/socket.io/socket.io.js"></script>
+    <!--this file will connect user/client to server's socket 
+                                                     when any one open this html file on server. -->
+    <script src="/js/client.js"></script><!-- here we linked client.js -->
+</body>
+
+</html>
